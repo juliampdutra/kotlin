@@ -17,29 +17,35 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun PerfilScreen(modifier: Modifier = Modifier, navController: NavController) {
-    Box(
-    modifier = modifier
-        .fillMaxSize()
-        .background(Color(0xFF82468D))
-        .padding(32.dp)
-) {
-    Text(
-        text = "PERFIL",
-        fontSize = 24.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.White
-    )
-    Button(
-        onClick = { navController.navigate("menu") },
-        colors = ButtonDefaults.buttonColors(Color.White),
-        modifier = Modifier.align(Alignment.Center)
+fun PedidosScreen(modifier: Modifier = Modifier, navController: NavController, cliente: String?) {
+    fun PerfilScreen(
+        modifier: Modifier = Modifier,
+        navController: NavController,
+        nome: String,
+        idade: Int
     ) {
-        Text(
-            text = "Voltar",
-            fontSize = 20.sp,
-            color = Color.Black
-        )
+        Box(
+            modifier = modifier
+                .fillMaxSize()
+                .background(Color(0xFF82468D))
+                .padding(32.dp)
+        ) {
+            Text(
+                text = "PERFIL - $nome tem $idade anos",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+            Button(
+                onClick = { navController.navigate("menu") },
+                colors = ButtonDefaults.buttonColors(Color.White),
+                modifier = Modifier.align(Alignment.Center)
+            ) {
+                Text(
+                    text = "PEDIDOS - $cliente",
+                    fontSize = 20.sp,
+                    color = Color.Black
+                )
+            }
+        }
     }
-}
-}

@@ -42,41 +42,41 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
                 .align(Alignment.Center)
         ) {
             Button(
-                onClick = { navController.navigate("perfil") },
-                colors = ButtonDefaults.buttonColors(Color.White),
-                modifier = Modifier.size(width = 200.dp, height = 48.dp)
-            ) {
-                Text(
-                    text = "Perfil",
-                    fontSize = 20.sp,
-                    color = Color.Black
-                )
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = { navController.navigate("pedidos") },
-                colors = ButtonDefaults.buttonColors(Color.White),
-                modifier = Modifier.size(width = 200.dp, height = 48.dp)
-            ) {
-                Text(
-                    text = "Pedidos",
-                    fontSize = 20.sp,
-                    color = Color.Black
-                )
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = { navController.navigate("login") },
-                colors = ButtonDefaults.buttonColors(Color.White),
-                modifier = Modifier.size(width = 200.dp, height = 48.dp)
-            ) {
-                Text(
-                    text = "Sair",
-                    fontSize = 20.sp,
-                    color = Color.Black
-                )
-            }
+                onClick = { navController.navigate("perfil/Julia Dutra/20") },},
+        colors = ButtonDefaults.buttonColors(Color.White),
+        modifier = Modifier.size(width = 200.dp, height = 48.dp)
+        ) {
+        Text(
+            text = "Perfil",
+            fontSize = 20.sp,
+            color = Color.Black
+        )
+    }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = { navController.navigate("pedidos?cliente=Cliente ABCD") },
+            colors = ButtonDefaults.buttonColors(Color.White),
+            modifier = Modifier.size(width = 200.dp, height = 48.dp)
+        ) {
+            Text(
+                text = "Pedidos",
+                fontSize = 20.sp,
+                color = Color.Black
+            )
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = { navController.navigate("login") },
+            colors = ButtonDefaults.buttonColors(Color.White),
+            modifier = Modifier.size(width = 200.dp, height = 48.dp)
+        ) {
+            Text(
+                text = "Sair",
+                fontSize = 20.sp,
+                color = Color.Black
+            )
         }
     }
+}
 }
 
