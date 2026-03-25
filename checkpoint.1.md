@@ -1,4 +1,5 @@
-1. Passagem de parâmetros obrigatórios na tela de Perfil:
+1. Passagem de parâmetros obrigatórios na tela de Perfil
+   
 O que foi implemtado?
 -> composable(route = "perfil/{nome}") {
    val nome: String? = it.arguments?.getString("nome", "Convidado")
@@ -34,6 +35,7 @@ Enviando: Na tela de origem, a navegação é chamada utilizando a interpolaçã
 Recebendo: Dentro do bloco composable, o parâmetro é recuperado através do objeto it.arguments.
 
 2. Passagem de parâmetros opcionais na tela de Pedidos.
+   
 O que foi implementado?
 composable(
     route = "pedidos?cliente={cliente}",
@@ -91,6 +93,7 @@ Enviando: Na ação de clique (onClick), o comando navController.navigate("pedid
 Este comando "empacota" a String "Cliente ABCD" e a envia através da URL de navegação.
 
 4. Passagem de múltiplos parâmetros
+
 O que foi implementado?
   PedidosScreen(
         modifier = Modifier.padding(innerPadding),
